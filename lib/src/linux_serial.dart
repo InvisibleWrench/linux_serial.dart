@@ -814,7 +814,7 @@ class SerialPortHandle implements StringSink, StringReader {
     return result.then<void>((value) => null);
   }
 
-  Future<void> writeBytes(List<int> bytes) {
+  Future<void> writeBytes(Iterable<int> bytes) {
     assert(_isOpen);
 
     if (bytes.isEmpty) {
